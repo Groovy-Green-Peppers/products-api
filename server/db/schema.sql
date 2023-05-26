@@ -34,7 +34,7 @@ CREATE TABLE photos (
 CREATE TABLE skus (
   id SERIAL PRIMARY KEY,
   style_id INTEGER REFERENCES styles(id),
-  size VARCHAR(5),
+  size VARCHAR(20),
   quantity INTEGER
 );
 
