@@ -30,7 +30,7 @@ const getProductStyle = async (id) => {
   GROUP BY p.id;`;
 
   const results = await dbInstance.query(response, [id]);
-  return results.rows;
+  return results.rows[0];
 };
 
 const getProduct = async (id) => {
