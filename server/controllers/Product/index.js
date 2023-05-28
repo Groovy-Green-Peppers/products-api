@@ -6,7 +6,6 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   try {
     const results = await productController.getProducts();
-    console.log(results);
     res.send(results.rows);
   } catch (err) {
     console.error(err);
@@ -40,14 +39,6 @@ router.get('/:id/related', async (req, res) => {
     res.send(results);
   } catch (err) {
     console.error(err);
-    res.sendStatus(400);
-  }
-});
-
-router.get('/:id/test', async (req, res) => {
-  try {
-    res.send(200);
-  } catch (err) {
     res.sendStatus(400);
   }
 });
