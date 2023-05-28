@@ -44,12 +44,4 @@ router.get('/:id/related', async (req, res) => {
   }
 });
 
-router.get('/:id/test', async (req, res) => {
-  try {
-    res.send(200);
-  } catch (err) {
-    res.sendStatus(400);
-  }
-});
-
 module.exports = router;
