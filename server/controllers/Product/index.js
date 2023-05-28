@@ -6,7 +6,6 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   try {
     const results = await productController.getProducts();
-    console.log(results);
     res.send(results.rows);
   } catch (err) {
     console.error(err);
