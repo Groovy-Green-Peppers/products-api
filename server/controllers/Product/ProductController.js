@@ -45,7 +45,8 @@ const getProduct = async (id) => {
   WHERE
     p.id = $1
   GROUP BY
-    p.id`;
+    p.id
+  LIMIT 1`;
 
   const results = await dbInstance.query(response, [id]);
   return results.rows[0];
