@@ -1,7 +1,0 @@
-FROM node
-WORKDIR /usr/src/app
-RUN npm INSTALL
-COPY package*.json ./
-COPY . .
-EXPOSE 3000
-CMD [ "node", "./server/index.js" ]
